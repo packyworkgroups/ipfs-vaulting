@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const uri = 'https://raw.githubusercontent.com/paraswap/paraswap-rewards-snapshot/master/data/airdrop-users.json'
+  const uri = 'https://raw.githubusercontent.com/packyworkgroups/ipfs-vaulting/11efab8a3afa121aab83cbadb602857b63472423/updater/airdrop-users.json'
 
   $.getJSON(uri, function(data) {
     var table = $('#airdropTable');
