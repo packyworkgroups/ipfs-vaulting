@@ -4,9 +4,9 @@ $(document).ready(function() {
   $.getJSON(uri, function(data) {
     var table = $('#airdropTable');
     data.forEach(function(object) {
-      let claimable = object.earnings / Math.pow(10, 18)
+      let claimable = object.ipfs / Math.pow(10, 18)
 
-      markup = '<tr><td>' + object.address + '</td>'
+      markup = '<tr><td>' + object.to.mywallet.services + '</td>'
       + '<td>' + claimable + '</td>'
       + '<td>' + object.reasons + '</td></tr>';
       table.append(markup);
