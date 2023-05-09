@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  const uri = 'https://raw.githubusercontent.com/packyworkgroups/ipfs-vaulting/main/updater/tester.json'
+  const uri = 'https://raw.githubusercontent.com/paraswap/paraswap-rewards-snapshot/master/data/airdrop-users.json'
 
   $.getJSON(uri, function(data) {
     var table = $('#airdropTable');
     data.forEach(function(object) {
-      let claimable = object.ipfs / Math.pow(10, 18)
+      let claimable = object.earnings / Math.pow(10, 18)
 
-      markup = '<tr><td>' + object.to.mywallet.services + '</td>'
+      markup = '<tr><td>' + object.address + '</td>'
       + '<td>' + claimable + '</td>'
       + '<td>' + object.reasons + '</td></tr>';
       table.append(markup);
